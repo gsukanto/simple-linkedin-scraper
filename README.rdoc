@@ -1,28 +1,33 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby version
+  - 2.3.0
 
-Things you may want to cover:
+# System dependencies
+  - rails
+  - bundler
+  - postgres
+  - redis
+  - gem 'linkedid-scrapper'
 
-* Ruby version
+# Configuration
+  - clone this repo
+  - checkout to develop branch
+  - install all depencies (postgres, redis, ruby, gem, rails, and bundler)
+  - run bundle install
 
-* System dependencies
+# Database creation
+  After depencies configuration done, run:
+  - rake db:create
+  - rake db:migrate
 
-* Configuration
+# How to run the test suite
+  This rails only use Rake Task. Using rails because need the model for Ruby (very good ORM) and its inheritance.
+  For running use command:
+  - bundle exec rake scraper:linkedin URL=linkedin_url
 
-* Database creation
+  For example:
+  - bundle exec rake scraper:linkedin URL="https://id.linkedin.com/in/alietan"
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
+Feel free to ask if you find something strange, maybe I really design it like that or its my fault that I need to learn and fix. :D
 <tt>rake doc:app</tt>.
